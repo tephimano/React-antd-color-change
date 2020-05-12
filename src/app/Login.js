@@ -4,10 +4,12 @@ import { Button, Layout } from "antd";
 const { Header, Sider, Content, Footer } = Layout;
 export default function login() {
   return (
-    <Layout>
+    <Layout style={{ height: "100vh" }}>
       <Header>Header</Header>
       <Layout>
-        <Sider>Sider</Sider>
+        <Sider collapsible breakpoint="lg">
+          Sider
+        </Sider>
         <Layout>
           <Content>
             <div
