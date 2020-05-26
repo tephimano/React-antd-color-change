@@ -1,4 +1,3 @@
-import "../color/colors";
 const { override, fixBabelImports, addLessLoader } = require("customize-cra");
 
 module.exports = override(
@@ -11,7 +10,6 @@ module.exports = override(
       javascriptEnabled: true,
       modifyVars: {
         "@primary-color": "@magenta-6", //Color of buttons and selected menu items
-        "@primary-5": color(~`colorPalette('@{primary-color}', 5) `),
         "@info-color": "@primary-color",
         "@success-color": "@green-6",
         "@processing-color": "@magenta-6",
