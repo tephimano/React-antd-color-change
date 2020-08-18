@@ -16,14 +16,6 @@ class LoginClass extends Component {
     };
   }
 
-  sortByProperty(property) {
-    return function (a, b) {
-      if (a[property] > b[property]) return 1;
-      else if (a[property] < b[property]) return -1;
-      return 0;
-    };
-  }
-
   generateChartdetails(response) {
     const data = response;
     data.sort(this.sortByProperty("ts"));
@@ -104,7 +96,7 @@ class LoginClass extends Component {
   handleChange = (value) => {
     this.setState({
       dropValue: value,
-      loaded:false,
+      loaded: false,
     });
     let url = "";
     let startDate = new Date();
@@ -166,7 +158,7 @@ class LoginClass extends Component {
         </div>
       );
     } else {
-        return <p> Still Loading </p>
+      return <p> Still Loading </p>;
     }
   }
 }
